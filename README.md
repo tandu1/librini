@@ -1,10 +1,10 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 # Rini - librini
-Rini (*really small ini parser*) is a tiny, standalone, blazing fast .ini file parser. All other parsers rely on libc functions such as 'strtok', however Rini is in complete raw C code designed to handle the 'ini' format thus is much faster and efficient. This is the first parser I've made completely from scratch, feedback is welcome. I'll be removing the libc helper functions in the next release.
+Rini (*really small ini parser*) is a tiny, standalone, blazing fast .ini file parser. All other parsers rely on libc functions such as `strtok`, however Rini is in complete raw C code designed to handle the 'ini' format thus is much faster and efficient. This is the first parser I've made completely from scratch, feedback is welcome. I'll be removing the libc helper functions in the next release.
 
 # Advantages over other parsers
-- No overhead of using functions such as strtok.
+- No overhead of using functions such as `strtok`.
 - Much smaller in size compared to other parsers.
 - Clean, maintainable code.
 - Much faster than its counterparts.
@@ -20,9 +20,16 @@ Rini (*really small ini parser*) is a tiny, standalone, blazing fast .ini file p
 `MAX_NAME` is the set maximum length of keys (not values) and headers and has a default value of 256, you may however change this macro in `rini.h`.
 
 # Building
+
+In the top-level directory of this repository, run
+
 ```
-cmake --build .
+mkdir build
+cmake ..
+make
 ```
+
+This will generate a `libRini.a` static library that you can then link to your application.
 
 # Usage
 

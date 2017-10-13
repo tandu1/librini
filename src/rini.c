@@ -198,7 +198,7 @@ static bool_type_t rini_get_bool(char* buf, unsigned buf_size)
  * @param size The overall size of the configuration buffer, this will make sure that the @param out_size is not greater than our overall size.
  * @return Returns 1 on success.
  */
-static int rini_get_node(char* node, char* name, void* out,
+static int rini_get_node(const char* node, const char* name, void* out,
                          unsigned out_size, value_types_t val_type,
                          unsigned size)
 {
@@ -218,7 +218,7 @@ static int rini_get_node(char* node, char* name, void* out,
     memset(int_str, 0, MAX_INT_STR_SIZE);
     memset(bool_str, 0, MAX_BOOL_KEY_SIZE);
 
-    char* name_buf = (char*)name_parsed, *int_buf = (char*)int_str, *bool_buf = (char*)bool_str, *node_buf = node;
+    char* name_buf = (char*)name_parsed, *int_buf = (char*)int_str, *bool_buf = (char*)bool_str, *node_buf = (char*)node;
     unsigned buf_size = 0, val_size = 1;
 
     for ( ; PTR_NOT_END(node_buf) && buf_size < size; node_buf++, buf_size++)
