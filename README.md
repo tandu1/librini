@@ -1,7 +1,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 # Rini - librini
-Rini (*really small ini parser*) is a tiny, standalone, blazing fast .ini file parser. All other parsers rely on libc functions such as `strtok`, however Rini is in complete raw C code designed to handle the 'ini' format thus is much faster and efficient. This is the first parser I've made completely from scratch, feedback is welcome. I'll be removing the libc helper functions in the next release.
+Rini (*really small ini parser*) is a tiny, standalone, blazing fast INI file parser coded in C. All other parsers rely on libc functions such as `strtok`, however Rini is in complete raw C code designed to handle the 'ini' format thus is much faster and efficient. This is the first parser I've made completely from scratch, feedback is welcome. I'll be removing the libc helper functions in the next release.
 
 # Advantages over other parsers
 - No overhead of using functions such as `strtok`.
